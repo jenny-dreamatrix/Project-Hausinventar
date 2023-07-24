@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { RefreshContext } from "../context/Context";
 import axios from "axios";
 import "./AddItem.css"
+import upload from "../src/assets/imgs/upload.png"
 
 const AddMidItem = () => {
     const {refresh, setRefresh} = useContext(RefreshContext)
@@ -23,7 +24,8 @@ const AddMidItem = () => {
         <form onSubmit={AddItem} style={adding ? {display: "block"} : {display: "none"}} className="addItemForm">
             <input type="text" placeholder="title" name="title"/>
             <input type="text" placeholder="room" name="room"/>
-            <input type="file" placeholder="image" name="image"/>
+            <input type="file" name="image" id="file" className="inputfile"/>
+            <label for="file"><img src={upload} alt="upload" className="upload" /> Image</label>
             <input type="textarea" placeholder="content" name="content"/>
             <button className="PublishBtn" type="submit">Publish</button>
         </form>
