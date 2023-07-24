@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import "./BackBtn.css"
 
 const BackBtn = () => {
     const navigate = useNavigate()
@@ -8,7 +9,7 @@ const BackBtn = () => {
     }
 
     return ( 
-        <button onClick={goBack}>Back</button>
+        <button className="BackBtn" onClick={goBack}>Back</button>
      );
 }
  

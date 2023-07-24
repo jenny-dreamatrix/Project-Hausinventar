@@ -23,6 +23,7 @@ const SmallStuff = () => {
     return ( 
         <>
         <Nav/>
+        <main className="main-wrapper">
         <AddSmallItem/>
         <h1>Small Stuff</h1>
         <div className="gridStuff">
@@ -36,6 +37,7 @@ const SmallStuff = () => {
         </div>
 
         <BackBtn/>
+        </main>
         </>
      );
 }

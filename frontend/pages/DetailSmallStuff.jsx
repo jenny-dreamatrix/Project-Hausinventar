@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useContext } from "react";
 import { RefreshContext } from "../context/Context";
 import BackBtn from "../components/BackBtn";
+import Nav from "../components/Nav";
 
 const DetailSmallStuff = () => {
     const params = useParams()
@@ -51,48 +52,37 @@ const DetailSmallStuff = () => {
         setEditingContent(false)
         e.target.reset()
     }
-    // const EditImage = async (e) => {
-    //     e.preventDefault()
-    //     const formData = new FormData(e.target)
-    //     const newImage = { image: {url: formData}}
-    //     const {data} = await axios.put(`/api/smallstuff/${params.id}`, formData)
-    //     setRefresh(prev => !prev)
-    //     setEditingImage(false)
-    //     e.target.reset()
-    // }
+
     return ( 
         <>
+        <Nav/>
+        <main className="main-wrapper">
         {detailData ? (
             <section>
-                <article>
+                <article className="DetailArticle">
                 
-                {/* edit image */}
-                <div>
-                <img src={detailData.image?.url} alt={detailData.title} />
-                {/* <button onClick={() => setEditingImage(prev => !prev)}>Edit</button>
-                <form onSubmit={EditImage} style={editingImage ? {display: "block"} : {display: "none"}} className={editingImage ? "edit-pop-up" : ""}>
-                    <input type="file" name="image" placeholder="image" />
-                    <button type="submit">Publish</button>
-                </form> */}
-                </div>
+                {/* image */}
+                <img className="DetailImg" src={detailData.image?.url} alt={detailData.title} />
+
+                <div className="ItemDiv">
 
                 {/* edit title */}
                 <div>
-                <h3>{detailData.title}</h3>
+                <h3 className="ItemTitle">{detailData.title}</h3>
                 <button onClick={() => setEditingTitle(prev => !prev)}>Edit</button>
                 <form onSubmit={EditTitle} style={editingTitle ? {display: "block"} : {display: "none"}} className={editingTitle ? "edit-pop-up" : ""}>
                     <input type="text" name="title" placeholder="title" ref={titleRef}/>
-                    <button type="submit">Publish</button>
+                    <button className="PublishBtn" type="submit">Publish</button>
                 </form>
                 </div>
 
                 {/* edit room */}
                 <div>
-                <h5>{detailData.room}</h5>
+                <h5 className="ItemRoom">{detailData.room}</h5>
                 <button onClick={() => setEditingRoom(prev => !prev)}>Edit</button>
                 <form onSubmit={EditRoom} style={editingRoom ? {display: "block"} : {display: "none"}} className={editingRoom ? "edit-pop-up" : ""}>
                     <input type="text" name="room" placeholder="room" ref={roomRef}/>
-                    <button type="submit">Publish</button>
+                    <button className="PublishBtn" type="submit">Publish</button>
                 </form>
                 </div>
 
@@ -100,14 +90,14 @@ const DetailSmallStuff = () => {
 
                 {/* edit content */}
                 <div>
-                <p>{detailData.content}</p>
+                <p className="ItemContent">{detailData.content}</p>
                 <button onClick={() => setEditingContent(prev => !prev)}>Edit</button>
                 <form onSubmit={EditContent} style={editingContent ? {display: "block"} : {display: "none"}} className={editingContent ? "edit-pop-up" : ""}>
                     <input type="text" name="content" placeholder="content" ref={contentRef}/>
-                    <button type="submit">Publish</button>
+                    <button className="PublishBtn" type="submit">Publish</button>
                 </form>
                 </div>
-
+                </div>
                 </article>
             </section>
         ) : (
@@ -115,6 +105,7 @@ const DetailSmallStuff = () => {
         )}
 
         <BackBtn/>
+        </main>
         </>
      );
 }

@@ -1,29 +1,29 @@
-h1{
-    font-size: 5rem;
+h1 {
+  font-size: 5rem;
 }
 
-.homeH2{
-font-size: 3rem;
-width: 50vw;
-text-align: center;
-color: black;
+.homeH2 {
+  font-size: 3rem;
+  width: 50vw;
+  text-align: center;
+  color: black;
 }
 
-.hero{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.homeDiv{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+.homeDiv {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.homeImg{
-    width: 50vw;
-    height: 100%;
+.homeImg {
+  width: 50%;
+  height: 100%;
 }
