@@ -1,0 +1,53 @@
+.ItemArticle{
+    height: 40vh;
+    display: flex;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.ItemImg{
+    height: 40vh;
+    width: 50%;
+    object-fit: fill;
+    border-radius: 5px 20px 0px 5px;
+}
+
+.ItemDiv{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ItemTitle{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ItemRoom{
+    margin-bottom: 0.5rem; 
+}
+
+.ItemContent{
+    margin-bottom: 0.2rem; 
+}
+
+.ItemText{
+    width: 90%;
+    margin-bottom: 0.5rem; 
+}
+
+.btnDiv{
+    width: 90%;
+    display: flex;
+    justify-content: end
+}
+
+.EditBtn{
+    width: 1rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: rgb(133, 131, 132);
+}

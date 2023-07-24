@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { RefreshContext } from "../context/Context";
 import BigStuffItem from "../components/BigStuffItem";
 import AddBigItem from "../components/AddBigItem";
+import Nav from "../components/Nav";
+import "./Stuff.css"
 
 const BigStuff = () => {
     const [bigStuffData, setBigStuffData] = useState([])
@@ -19,15 +21,18 @@ const BigStuff = () => {
 
     return ( 
         <>
+        <Nav/>
         <AddBigItem/>
-        
-         {bigStuffData ? (
-            bigStuffData.map((item, index) => {
-                return <BigStuffItem item={item} key={index} />
-            })
-         ) : (
-            <p>pending..</p>
-         )}
+        <h1>BIG STUFF</h1>
+            <div className="gridStuff">
+            {bigStuffData ? (
+                bigStuffData.map((item, index) => {
+                    return <BigStuffItem item={item} key={index} />
+                })
+            ) : (
+                <p>pending..</p>
+            )}
+            </div>
         </>
      );
 }
