@@ -6,6 +6,7 @@ import MidStuffItem from "../components/MidStuffItem";
 import AddMidItem from "../components/AddMidItem";
 import Nav from "../components/Nav";
 import "./Stuff.css"
+import BackBtn from "../components/BackBtn";
 
 const MidStuff = () => {
     const [midStuffData, setMidStuffData] = useState([])
@@ -33,8 +34,10 @@ const MidStuff = () => {
             <p>pending..</p>
          )}
         </div>
+
+        <BackBtn/>
         </>
-     );
+    );
 }
  
 export default MidStuff;

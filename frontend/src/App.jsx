@@ -6,6 +6,10 @@ import { useState } from 'react'
 import BigStuff from '../pages/BigStuff'
 import MidStuff from '../pages/MidStuff'
 import SmallStuff from '../pages/SmallStuff'
+import DetailBigStuff from '../pages/DetailBigStuff'
+import DetailMidStuff from '../pages/DetailMidStuff'
+import DetailSmallStuff from '../pages/DetailSmallStuff'
+
 
 function App() {
   const [refresh, setRefresh] = useState(true)
@@ -19,7 +23,9 @@ function App() {
       <Route path='/bigstuff' element={<BigStuff/>}/>
       <Route path='/notsobigstuff' element={<MidStuff/>} />
       <Route path='/smallstuff' element={<SmallStuff/>} />
-      {/* <Route path='' /> */}
+      <Route path='/bigstuff/:id' element={<DetailBigStuff/>}/>
+      <Route path='/notsobigstuff/:id' element={<DetailMidStuff/>}/>
+      <Route path='/smallstuff/:id' element={<DetailSmallStuff/>}/>
     </Routes>
     </BrowserRouter>
     </RefreshContext.Provider>

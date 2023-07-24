@@ -6,6 +6,7 @@ import SmallStuffItem from "../components/SmallStuffItem";
 import AddSmallItem from "../components/AddSmallItem";
 import Nav from "../components/Nav";
 import "./Stuff.css"
+import BackBtn from "../components/BackBtn";
 
 const SmallStuff = () => {
     const [smallStuffData, setSmallStuffData] = useState([])
@@ -33,6 +34,8 @@ const SmallStuff = () => {
             <p>pending..</p>
          )}
         </div>
+
+        <BackBtn/>
         </>
      );
 }

@@ -1,4 +1,5 @@
 import "./StuffItem.css"
+import { Link } from "react-router-dom" 
 
 const SmallStuffItem = (props) => {
     return ( 
@@ -10,11 +11,11 @@ const SmallStuffItem = (props) => {
             <h4 className="ItemContent">Beschreibung</h4>
             <p className="ItemText">{props.item.content}</p>
             <div className="btnDiv">
-                <button className="EditBtn">Edit</button>
+                <Link className="EditBtn" to={`/smallstuff/${props.item._id}`}>Edit</Link>
             </div>
         </div>
     </article>
-     );
+    );
 }
  
 export default SmallStuffItem;

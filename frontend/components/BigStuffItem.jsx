@@ -1,4 +1,5 @@
 import "./StuffItem.css"
+import { Link } from "react-router-dom" 
 
 const BigStuffItem = (props) => {
     return ( 
@@ -10,7 +11,7 @@ const BigStuffItem = (props) => {
                 <h4 className="ItemContent">Beschreibung</h4>
                 <p className="ItemText">{props.item.content}</p>
                 <div className="btnDiv">
-                    <button className="EditBtn">Edit</button>
+                    <Link className="EditBtn" to={`/bigstuff/${props.item._id}`}>Edit</Link>
                 </div>
             </div>
         </article>

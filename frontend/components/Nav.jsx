@@ -9,7 +9,7 @@ const Nav = () => {
             <NavLink className="link" to={"/notsobigstuff"}>NOT SO BIG STUFF</NavLink>
             <NavLink className="link" to={"/smallstuff"}>SMALL STUFF</NavLink>
         </nav>
-     );
+    );
 }
  
 export default Nav;
