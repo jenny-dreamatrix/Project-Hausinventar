@@ -1,9 +1,5 @@
-.add-pop-up {
-  /* position: absolute; */
-  background-color: grey;
-  padding: 1rem;
-}
-.edit-pop-up {
-  background-color: grey;
-  padding: 1rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

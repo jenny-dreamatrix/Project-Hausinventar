@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { RefreshContext } from "../context/Context";
 import MidStuffItem from "../components/MidStuffItem";
 import AddMidItem from "../components/AddMidItem";
+import Nav from "../components/Nav";
+import "./Stuff.css"
 import BackBtn from "../components/BackBtn";
 
 const MidStuff = () => {
@@ -20,9 +22,10 @@ const MidStuff = () => {
 
     return ( 
         <>
+        <Nav/>
         <AddMidItem/>
-        <h1>Test</h1>
-
+        <h1>Not So Big Stuff</h1>
+        <div className="gridStuff">
         {midStuffData ? (
             midStuffData.map((item, index) => {
                 return <MidStuffItem item={item} key={index} />
@@ -30,10 +33,11 @@ const MidStuff = () => {
          ) : (
             <p>pending..</p>
          )}
+        </div>
 
-         <BackBtn/>
+        <BackBtn/>
         </>
-     );
+    );
 }
  
 export default MidStuff;

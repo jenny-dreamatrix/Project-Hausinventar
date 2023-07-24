@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { RefreshContext } from "../context/Context";
 import SmallStuffItem from "../components/SmallStuffItem";
 import AddSmallItem from "../components/AddSmallItem";
+import Nav from "../components/Nav";
+import "./Stuff.css"
 import BackBtn from "../components/BackBtn";
 
 const SmallStuff = () => {
@@ -20,8 +22,10 @@ const SmallStuff = () => {
 
     return ( 
         <>
+        <Nav/>
         <AddSmallItem/>
-
+        <h1>Small Stuff</h1>
+        <div className="gridStuff">
         {smallStuffData ? (
             smallStuffData.map((item, index) => {
                 return <SmallStuffItem item={item} key={index} />
@@ -29,8 +33,9 @@ const SmallStuff = () => {
          ) : (
             <p>pending..</p>
          )}
+        </div>
 
-         <BackBtn/>
+        <BackBtn/>
         </>
      );
 }

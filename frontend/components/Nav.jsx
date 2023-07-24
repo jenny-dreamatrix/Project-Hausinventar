@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
+import "./Nav.css"
 
 const Nav = () => {
     return ( 
         <nav>
-            <NavLink to={"/"}>HOME</NavLink>
-            <NavLink to={"/"}>BIG STUFF</NavLink>
-            <NavLink to={"/"}>NOT SO BIG STUFF</NavLink>
-            <NavLink to={"/"}>SMALL STUFF</NavLink>
+            <NavLink className="link" to={"/"}>HOME</NavLink>
+            <NavLink className="link" to={"/bigstuff"}>BIG STUFF</NavLink>
+            <NavLink className="link" to={"/notsobigstuff"}>NOT SO BIG STUFF</NavLink>
+            <NavLink className="link" to={"/smallstuff"}>SMALL STUFF</NavLink>
         </nav>
-     );
+    );
 }
  
 export default Nav;
