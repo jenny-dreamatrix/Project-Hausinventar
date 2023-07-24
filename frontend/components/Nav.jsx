@@ -1,6 +1,13 @@
+import { NavLink } from "react-router-dom";
+
 const Nav = () => {
     return ( 
-        <nav></nav>
+        <nav>
+            <NavLink to={"/"}>HOME</NavLink>
+            <NavLink to={"/"}>BIG STUFF</NavLink>
+            <NavLink to={"/"}>NOT SO BIG STUFF</NavLink>
+            <NavLink to={"/"}>SMALL STUFF</NavLink>
+        </nav>
      );
 }
  

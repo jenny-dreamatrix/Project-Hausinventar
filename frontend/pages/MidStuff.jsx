@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { RefreshContext } from "../context/Context";
 import MidStuffItem from "../components/MidStuffItem";
 import AddMidItem from "../components/AddMidItem";
+import BackBtn from "../components/BackBtn";
 
 const MidStuff = () => {
     const [midStuffData, setMidStuffData] = useState([])
@@ -15,7 +16,7 @@ const MidStuff = () => {
             setMidStuffData(data)
         }
         fetchData()
-    },[])
+    },[refresh])
 
     return ( 
         <>
@@ -29,6 +30,8 @@ const MidStuff = () => {
          ) : (
             <p>pending..</p>
          )}
+
+         <BackBtn/>
         </>
      );
 }
