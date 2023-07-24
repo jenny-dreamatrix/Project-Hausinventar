@@ -16,7 +16,7 @@
   color: rgb(133, 131, 132);
   text-decoration: none;
   text-transform: uppercase;
-  /* padding: 0.5rem 0; */
+  /* place-self: end; */
 }
 .EditBtn:hover {
   color: black;

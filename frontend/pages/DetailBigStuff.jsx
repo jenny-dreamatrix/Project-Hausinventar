@@ -68,39 +68,37 @@ const DetailBigStuff = () => {
                 <div className="ItemDiv">
                 
                 {/* edit title */}
-                <div>
-                <h3 className="ItemTitle">{detailData.title}</h3>
-                <button className="EditBtn" onClick={() => setEditingTitle(prev => !prev)}>Edit</button>
-                <form onSubmit={EditTitle} style={editingTitle ? {display: "block"} : {display: "none"}} className={editingTitle ? "edit-pop-up" : ""}>
-                    <input type="text" name="title" placeholder="title" ref={titleRef}/>
-                    <button className="PublishBtn" type="submit">Publish</button>
-                </form>
+                <div className="DetailEditWrapper">
+                    <h3 className="DetailTitle">{detailData.title}</h3>
+                    <button className="EditBtn" onClick={() => setEditingTitle(prev => !prev)}>Edit</button>
+                    <form onSubmit={EditTitle} style={editingTitle ? {display: "block"} : {display: "none"}} className="edit-pop-up">
+                        <input type="text" name="title" placeholder="Title" ref={titleRef}/>
+                        <button className="PublishBtn" type="submit">Publish</button>
+                    </form>
                 </div>
 
                 {/* edit room */}
-                <div>
-                    <div className="DetailEditWrapper">
-                <h5 className="ItemRoom">{detailData.room}</h5>
-                <button className="EditBtn" onClick={() => setEditingRoom(prev => !prev)}>Edit</button>
-
-                    </div>
-                <form onSubmit={EditRoom} style={editingRoom ? {display: "block"} : {display: "none"}} className={editingRoom ? "edit-pop-up" : ""}>
-                    <input type="text" name="room" placeholder="room" ref={roomRef}/>
-                    <button className="PublishBtn" type="submit">Publish</button>
-                </form>
+                <div className="DetailEditWrapper">
+                    <h5 className="DetailRoom">{detailData.room}</h5>
+                    <button className="EditBtn" onClick={() => setEditingRoom(prev => !prev)}>Edit</button>
+                    <form onSubmit={EditRoom} style={editingRoom ? {display: "block"} : {display: "none"}} className="edit-pop-up">
+                        <input type="text" name="room" placeholder="Room" ref={roomRef}/>
+                        <button className="PublishBtn" type="submit">Publish</button>
+                    </form>
                 </div>
-
-                <h4>Beschreibung</h4>
 
                 {/* edit content */}
-                <div>
-                <p className="ItemContent">{detailData.content}</p>
-                <button className="EditBtn" onClick={() => setEditingContent(prev => !prev)}>Edit</button>
-                <form onSubmit={EditContent} style={editingContent ? {display: "block"} : {display: "none"}} className={editingContent ? "edit-pop-up" : ""}>
-                    <input type="text" name="content" placeholder="content" ref={contentRef}/>
-                    <button className="PublishBtn" type="submit">Publish</button>
-                </form>
+                <div className="DetailEditWrapper">
+                    <h4>Beschreibung</h4>
+                    <button className="EditBtn" onClick={() => setEditingContent(prev => !prev)}>Edit</button>
+                    <form onSubmit={EditContent} style={editingContent ? {display: "block"} : {display: "none"}} className="edit-pop-up">
+                        <input type="text" name="content" placeholder="Beschreibung" ref={contentRef}/>
+                        <button className="PublishBtn" type="submit">Publish</button>
+                    </form>
                 </div>
+
+                <p className="DetailContent">{detailData.content}</p>
+
                 </div>
                 </article>
             </section>
