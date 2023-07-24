@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { RefreshContext } from "../context/Context";
 import axios from "axios";
+import "./AddItem.css"
 
 const AddBigItem = () => {
     const {refresh, setRefresh} = useContext(RefreshContext)
@@ -17,9 +18,9 @@ const AddBigItem = () => {
 
     return ( 
         <>
-        <button onClick={() => setAdding(prev => !prev)}>Add New Item</button>
+        <button className="AddBtn" onClick={() => setAdding(prev => !prev)}>Add New Item</button>
 
-        <form onSubmit={AddItem} style={adding ? {display: "block"} : {display: "none"}} className={adding ? "addItemForm" : ""}>
+        <form onSubmit={AddItem} style={adding ? {display: "block"} : {display: "none"}} className="addItemForm">
             <input type="text" placeholder="Title" name="title"/>
             <input type="text" placeholder="Room" name="room"/>
             <input type="file" placeholder="Image" name="image"/>

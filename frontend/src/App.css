@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main-wrapper {
+  padding: 3rem;
+}
+
+.EditBtn {
+  width: 1rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: rgb(133, 131, 132);
+  text-decoration: none;
+  text-transform: uppercase;
+  /* padding: 0.5rem 0; */
+}
+.EditBtn:hover {
+  color: black;
+}

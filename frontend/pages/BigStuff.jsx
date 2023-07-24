@@ -23,6 +23,7 @@ const BigStuff = () => {
     return ( 
         <>
         <Nav/>
+        <main className="main-wrapper">
         <AddBigItem/>
 
         <h1>BIG STUFF</h1>
@@ -37,6 +38,7 @@ const BigStuff = () => {
         </div>
 
          <BackBtn/>
+         </main>
         </>
     );
 }

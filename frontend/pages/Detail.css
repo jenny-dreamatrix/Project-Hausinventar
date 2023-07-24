@@ -1,0 +1,13 @@
+.DetailArticle {
+  display: flex;
+}
+.DetailImg {
+  height: 70vh;
+  width: 50%;
+  object-fit: fill;
+  border-radius: 5px 20px 0px 5px;
+}
+
+.DetailEditWrapper {
+  display: flex;
+}
