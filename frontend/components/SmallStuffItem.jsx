@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom" 
+
 const SmallStuffItem = (props) => {
     return ( 
         <article>
@@ -6,7 +8,7 @@ const SmallStuffItem = (props) => {
             <h5>{props.item.room}</h5>
             <h4>Beschreibung</h4>
             <p>{props.item.content}</p>
-            <button>Edit</button>
+            <Link to={`/smallstuff/${props.item._id}`}>Edit</Link>
         </article>
      );
 }

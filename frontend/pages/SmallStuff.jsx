@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { RefreshContext } from "../context/Context";
 import SmallStuffItem from "../components/SmallStuffItem";
 import AddSmallItem from "../components/AddSmallItem";
+import BackBtn from "../components/BackBtn";
 
 const SmallStuff = () => {
     const [smallStuffData, setSmallStuffData] = useState([])
@@ -28,6 +29,8 @@ const SmallStuff = () => {
          ) : (
             <p>pending..</p>
          )}
+
+         <BackBtn/>
         </>
      );
 }

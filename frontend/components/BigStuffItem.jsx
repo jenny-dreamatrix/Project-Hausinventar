@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom" 
+
 const BigStuffItem = (props) => {
     return ( 
         <article>
@@ -6,7 +8,7 @@ const BigStuffItem = (props) => {
             <h5>{props.item.room}</h5>
             <h4>Beschreibung</h4>
             <p>{props.item.content}</p>
-            <button>Edit</button>
+            <Link to={`/bigstuff/${props.item._id}`}>Edit</Link>
         </article>
      );
 }
