@@ -1,4 +1,8 @@
 import NavBar from "../components/NavBar.jsx";
+import BigImg from "../assets/imgs/Couch2.webp"
+import MidImg from "../assets/imgs/Hocker.webp"
+import SmallImg from "../assets/imgs/Vasen.webp"
+import "./Home.css"
 
 const Home = () => {
     return ( 
@@ -9,15 +13,15 @@ const Home = () => {
             </header>
             <section>
                 <div>
-                    <img src="" alt="big stuff" />
+                    <img src={BigImg} alt="big stuff" />
                     <h2>BIG STUFF</h2>
                 </div>
                 <div>
-                    <img src="" alt="not so big stuff" />
+                    <img src={MidImg} alt="not so big stuff" />
                     <h2>NOT SO BIG STUFF</h2>
                 </div>
                 <div>
-                    <img src="" alt="small stuff" />
+                    <img src={SmallImg} alt="small stuff" />
                     <h2>SMALL STUFF</h2>
                 </div>
             </section>
