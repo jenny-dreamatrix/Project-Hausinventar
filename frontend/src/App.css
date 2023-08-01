@@ -4,8 +4,89 @@
   box-sizing: border-box;
 }
 
-.main-wrapper {
-  padding: 3rem;
+html {
+  font-size: 62.5%;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --black-color: black;
+  --grey-color: rgb(78, 77, 77);
+  --light-grey-color: rgb(147, 146, 146);
+  --pink-color: rgba(244, 223, 223, 0.424);
+  --purple-color: rgb(120, 89, 106);
+  --white-color: white;
+  --soft-bg: #fafafa;
+}
+
+/* ------ FONTS ------ */
+
+h1 {
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 5rem;
+  width: 50vw;
+  text-align: center;
+  color: var(--black-color);
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+button {
+  font-size: 1.6rem;
+}
+
+/* ------ BUTTONS ------ */
+
+.PublishBtn,
+.AddBtn,
+.filter-btn,
+.sortiere-btn,
+.BackBtn {
+  width: 12rem;
+  padding: 1rem;
+  background-color: var(--grey-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 0 0 1rem 0;
+}
+
+.AddBtn,
+.filter-btn,
+.sortiere-btn {
+  display: block;
+}
+
+.PublishBtn:hover,
+.AddBtn:hover,
+.BackBtn:hover,
+.filter-btn:hover,
+.sortiere-btn:hover {
+  background-color: var(--purple-color);
 }
 
 .EditBtn {
@@ -13,11 +94,16 @@
   cursor: pointer;
   background: none;
   border: none;
-  color: rgb(133, 131, 132);
+  color: var(--grey-color);
   text-decoration: none;
   text-transform: uppercase;
-  /* place-self: end; */
 }
 .EditBtn:hover {
-  color: black;
+  color: var(--black-color);
+}
+
+/* ------ MAIN ------ */
+
+.main-wrapper {
+  padding: 3rem;
 }

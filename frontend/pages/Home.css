@@ -1,14 +1,3 @@
-h1 {
-  font-size: 5rem;
-}
-
-.homeH2 {
-  font-size: 3rem;
-  width: 50vw;
-  text-align: center;
-  color: black;
-}
-
 .hero {
   height: 100vh;
   display: flex;

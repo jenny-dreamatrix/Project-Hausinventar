@@ -19,13 +19,13 @@ const AddBigItem = () => {
 
     return ( 
         <>
-        <button className="AddBtn" onClick={() => setAdding(prev => !prev)}>Add New Item</button>
+        <button className="AddBtn" onClick={() => setAdding(prev => !prev)}>Add Item</button>
 
         <form onSubmit={AddItem} style={adding ? {display: "block"} : {display: "none"}} className="addItemForm">
             <input type="text" placeholder="Title" name="title"/>
             <input type="text" placeholder="Room" name="room"/>
             <input type="file" name="image" id="file" className="inputfile"/>
-            <label for="file"><img src={upload} alt="upload" className="upload" /> Image</label>
+            <label htmlFor="file"><img src={upload} alt="upload" className="upload" /> Image</label>
             <input type="textarea" placeholder="Beschreibung" name="content"/>
             <button className="PublishBtn" type="submit">Publish</button>
         </form>
